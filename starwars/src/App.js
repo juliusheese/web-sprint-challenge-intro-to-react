@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     getData();
   }, []);
-  console.log(data);
+  Character();
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
