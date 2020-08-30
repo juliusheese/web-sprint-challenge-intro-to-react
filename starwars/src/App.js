@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import Character from './components/Character.js';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -12,7 +13,7 @@ const App = () => {
   const getData = () => {
     axios
       .get("https://rickandmortyapi.com/api/character/")
-      .then(res => setData(res))
+      .then(res => setData(res.data.results))
       .catch(err => console.log(err));
   };
   useEffect(() => {
