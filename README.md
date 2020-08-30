@@ -30,11 +30,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a library for vinilla js. It solves the problems of vanilla by allowing easy html and css thru components and props. it is better at handling dynamic data for faster response times. react comes from reacting to data.
+
 1. Describe component state.
+it is an object which determines how the component renders.
 
 1. Describe props.
+props mean properties. props can be passed down a tree, nested, and inherited by other components. this allows children to have properties of parent components.
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+side effects are usually asynchranous non primary functions that do stuff besides rending the main page. you can sync effects in react components by putting the certain state or props in [] at the end of the component. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -42,28 +47,28 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-- [ ] Push commits: `git push origin <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [x ] Create a forked copy of this project
+- [ x] Add your team lead as collaborator on Github
+- [x ] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [ x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
+- [ x] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [x ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x ] Push commits: `git push origin <firstName-lastName>`
+- [x ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x ] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use ONE of the following APIs:
+- [ x] Use ONE of the following APIs:
   - [Star Wars API](https://swapi.dev/)
   - [Alternate Star Wars API](https://swapi.py4e.com/)
   - [The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [ x] Use the documentation and Google to learn how to fetch characters from your API.
+- [ x] Obtain a list of characters. One or several requests might be needed, depending on the API.
 - [ ] Set the list of characters into state.
 - [ ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
