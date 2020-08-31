@@ -4,15 +4,23 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const Card = styled.div`
-    width: 10vmax;
-    height: 100vmax;
+    width: 90vmax;
+    height: 70vmax;
     border-style: solid;
     margin: 1rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    align: center;
+
 `;
 const Ele = styled.div`
-margin: 1rem;
-padding: 1rem;
+display: flex; 
+flex-direction: column; 
+`;
+const Img = styled.img`
+
+object-fit: cover;
 `;
 
 
@@ -29,18 +37,28 @@ const Character = () => {
         getData();
     }, []);
     console.log(data);
-    const name = "  " + data.name + "  ";
-    const gender = data.gender;
-    const status = data.status;
-    const species = data.species;
-
+    const [showText, setShowText] = useState(false);
     return (
         <div>
-            {data.map((r) => <Card> <Ele>{r.name} </Ele>  <Ele>{r.gender}</Ele> </Card>)}
-            {data.map((r) => <Card> {r.status} </Card>)} <br></br>
-            {data.map((r) => <Card> <img src={r.image}></img> </Card>)} <br></br>
-            {data.map((r) => <Card> {r.species} </Card>)} <br></br>
-        </div>
+            {data.map((r) =>
+                <Card>
+                    <button onClick={() => setShowText(!showText)}>Toggle Text</button>
+                    {showText && <div>
+                        <Ele>{r.name} </Ele>
+                        <br></br>
+                        <Ele>{r.gender}</Ele>
+                        <br></br>
+                        <Ele> {r.status} </Ele>
+                        <br></br>
+                        <Ele> {r.species} </Ele>
+                        <br></br>
+                        <Ele> <Img src={r.image}></Img> </Ele>
+                    </div>}
+                </Card>
+            )
+            }
+        </div >
+
     );
 }
 export default Character;

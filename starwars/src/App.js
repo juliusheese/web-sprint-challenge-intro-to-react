@@ -19,11 +19,14 @@ const App = () => {
   useEffect(() => {
     getData();
   }, []);
+
+
   console.log(data);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character> </Character>
+
+      <Character>    </Character>
     </div>
   );
 }
