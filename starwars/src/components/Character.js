@@ -4,14 +4,15 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const Card = styled.div`
-    width: 90vmax;
-    height: 70vmax;
+    width: 50vmax;
+    height: 50vmax;
     border-style: solid;
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
     display: flex;
     flex-direction: column; 
-    align: center;
+    align-content: center;
+    align-items: center;
 
 `;
 const Ele = styled.div`
@@ -42,9 +43,8 @@ const Character = () => {
         <div>
             {data.map((r) =>
                 <Card>
-                    <button onClick={() => setShowText(!showText)}>Toggle Text</button>
+                    <button onClick={() => setShowText(!showText)}>Show/Hide {r.name}</button>
                     {showText && <div>
-                        <Ele>{r.name} </Ele>
                         <br></br>
                         <Ele>{r.gender}</Ele>
                         <br></br>
