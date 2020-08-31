@@ -69,7 +69,7 @@ Your finished project must include all of the following requirements:
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
 - [ x] Use the documentation and Google to learn how to fetch characters from your API.
 - [ x] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
+- [ x] Set the list of characters into state.
 - [ ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.

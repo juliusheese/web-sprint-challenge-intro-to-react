@@ -1,16 +1,18 @@
 // Write your Character component here
 import React, { useState, useEffect } from 'react';
-import App from '../App.js';
 import axios from 'axios';
 import styled from 'styled-components';
 
 const Card = styled.div`
     width: 10vmax;
-    height: 10vmax;
+    height: 100vmax;
+    border-style: solid;
+    margin: 1rem;
+    padding: 1rem;
 `;
-const Name = styled.p`
-border-style: solid;
-margin : 10rem;
+const Ele = styled.div`
+margin: 1rem;
+padding: 1rem;
 `;
 
 
@@ -27,16 +29,18 @@ const Character = () => {
         getData();
     }, []);
     console.log(data);
-    const name = data.map(r => r.name);
-    const gender = data.map(r => r.gender);
-    const image = data.map(r => r.image);
-    const status = data.map(r => r.status);
-    const species = data.map(r => r.species);
+    const name = "  " + data.name + "  ";
+    const gender = data.gender;
+    const status = data.status;
+    const species = data.species;
 
     return (
-        <Card>
-            <Name> {name} </Name>
-        </Card>
+        <div>
+            {data.map((r) => <Card> <Ele>{r.name} </Ele>  <Ele>{r.gender}</Ele> </Card>)}
+            {data.map((r) => <Card> {r.status} </Card>)} <br></br>
+            {data.map((r) => <Card> <img src={r.image}></img> </Card>)} <br></br>
+            {data.map((r) => <Card> {r.species} </Card>)} <br></br>
+        </div>
     );
 }
 export default Character;
